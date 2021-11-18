@@ -1,6 +1,13 @@
 <html>
-<head></head>
+<head>
+  <script type = "text/javascript" language="JavaScript">  
+    function loadAudio(audioPath, caption) {   
+      document.getElementById("AudioDiv").innerHTML = "<figure><figcaption>${caption}</figcaption><audio controls src=${audioPath}>Your browser does not support the<code>audio</code> element.</audio></figure>";  
+         }  
+  </script>  
+ </head>
 <body>
+  <h1>Some Comparison</h1>
   <!--<figure>
     <figcaption>Audio1</figcaption>
     <audio
@@ -36,16 +43,10 @@
 <tbody>
   <tr>
     <td class="tg-fymr" rowspan="2">Test sample 1</td>
-    <td class="tg-0lax" rowspan="2">
-      <figure>
-        <figcaption>Audio1</figcaption>
-        <audio
-         controls
-          src="mix.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-        </audio>
-      </figure>
+    <td id="AudioDiv" class="tg-0lax" rowspan="2">
+      <script type="text/javascript" language="JavaScript">
+        loadAudio("mix.wav","Input 1");
+      </script>
     </td>
     <td class="tg-0lax"></td>
     <td class="tg-0pky"></td>
