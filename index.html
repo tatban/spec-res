@@ -6,7 +6,7 @@
               }  
       </script>  
    </head>
-   <!--<body>
+   <body>
       <h1>Some Comparison</h1>
       <style type="text/css">
          .tg  {border-collapse:collapse;border-spacing:0;}
@@ -26,10 +26,11 @@
                <th class="tg-fymr">Data</th>
                <th class="tg-0lax"><span style="font-weight:bold">Input Mixed</span></th>
                <th class="tg-0lax"><span style="font-weight:bold">Ground Truths </span></th>
-               <th class="tg-fymr">Experiment 1</th>
-               <th class="tg-fymr">Experiment 2</th>
-               <th class="tg-fymr">Experiment 3</th>
-               <th class="tg-fymr">Experiment 4</th>
+               <th class="tg-fymr">exp1: Just Pretrained Inference</th>
+               <th class="tg-fymr">exp2: pretrined_followedBy_201_epoch_lr_1e-3_bs_16</th>
+               <th class="tg-fymr">exp3: pretrined_followedBy_201_epoch_lr_1e-6_bs_16</th>
+               <th class="tg-fymr">exp4: nonPreTrained_201_epoch_lr_1e-3_bs_6</th>
+               <th class="tg-fymr">exp5: nonPreTrained_201_epoch_lr_1e-3_bs_<b>16</b></th>
             </tr>
          </thead>
          <tbody>
@@ -42,16 +43,19 @@
                   <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/GTs/s1_gt_smpl_1.wav","S1 Clean","AudioDiv2");</script>
                </td>
                <td id="AudioDiv3" class="tg-0pky">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv3");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_1_justPretrained/s1_esti_smpl_1.wav","S1 estimated","AudioDiv3");</script>
                </td>
                <td id="AudioDiv4" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv4");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_2_pretrined_followedBy_201_epoch_lr_1e-3_bs_16/s1_esti_smpl_1.wav","S1 estimated","AudioDiv4");</script>
                </td>
                <td id="AudioDiv5" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv5");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_3_pretrined_followedBy_201_epoch_lr_1e-6_bs_16/s1_esti_smpl_1.wav","S1 estimated","AudioDiv5");</script>
                </td>
                <td id="AudioDiv6" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv6");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_4_nonPreTrained_lr_1e-3_bs_6/s1_esti_smpl_1.wav","S1 estimated","AudioDiv6");</script>
+               </td>
+               <td id="AudioDiv6a" class="tg-c3ow">
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_5_nonPreTrained_lr_1e-3_bs_16/s1_esti_smpl_1.wav","S1 estimated","AudioDiv6a");</script>
                </td>
             </tr>
             <tr>
@@ -59,16 +63,19 @@
                   <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/GTs/s2_gt_smpl_1.wav","S2 Clean","AudioDiv7");</script>
                </td>
                <td id="AudioDiv8" class="tg-0pky">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv8");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_1_justPretrained/s2_esti_smpl_1.wav","S2 estimated","AudioDiv8");</script>
                </td>
                <td id="AudioDiv9" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv9");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_2_pretrined_followedBy_201_epoch_lr_1e-3_bs_16/s2_esti_smpl_1.wav","S2 estimated","AudioDiv9");</script>
                </td>
                <td id="AudioDiv10" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv10");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_3_pretrined_followedBy_201_epoch_lr_1e-6_bs_16/s2_esti_smpl_1.wav","S2 estimated","AudioDiv10");</script>
                </td>
                <td id="AudioDiv11" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv11");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_4_nonPreTrained_lr_1e-3_bs_6/s2_esti_smpl_1.wav","S2 estimated","AudioDiv11");</script>
+               </td>
+               <td id="AudioDiv11a" class="tg-c3ow">
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_5_nonPreTrained_lr_1e-3_bs_16/s2_esti_smpl_1.wav","S2 estimated","AudioDiv11a");</script>
                </td>
             </tr>
             <tr>
@@ -80,16 +87,19 @@
                   <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/GTs/s1_gt_smpl_21.wav","S1 Clean","AudioDiv13");</script>
                </td>
                <td id="AudioDiv14" class="tg-0pky">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv14");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_1_justPretrained/s1_esti_smpl_21.wav","S1 estimated","AudioDiv14");</script>
                </td>
                <td id="AudioDiv15" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv15");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_2_pretrined_followedBy_201_epoch_lr_1e-3/s1_esti_smpl_21.wav","S1 estimated","AudioDiv15");</script>
                </td>
                <td id="AudioDiv16" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv16");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_3_pretrined_followedBy_201_epoch_lr_1e-6/s1_esti_smpl_21.wav","S1 estimated","AudioDiv16");</script>
                </td>
                <td id="AudioDiv17" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv17");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_4_nonPreTrained_lr_1e-3_bs_6/s1_esti_smpl_21.wav","S1 estimated","AudioDiv17");</script>
+               </td>
+               <td id="AudioDiv17a" class="tg-c3ow">
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_5_nonPreTrained_lr_1e-3_bs_16/s1_esti_smpl_21.wav","S1 estimated","AudioDiv17a");</script>
                </td>
             </tr>
             <tr>
@@ -97,19 +107,22 @@
                   <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/GTs/s2_gt_smpl_21.wav","S2 Clean","AudioDiv18");</script>
                </td>
                <td id="AudioDiv19" class="tg-0pky">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv19");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_1_justPretrained/s2_esti_smpl_21.wav","S2 estimated","AudioDiv19");</script>
                </td>
                <td id="AudioDiv20" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv20");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_2_pretrined_followedBy_201_epoch_lr_1e-3/s2_esti_smpl_21.wav","S2 estimated","AudioDiv20");</script>
                </td>
                <td id="AudioDiv21" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv21");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_3_pretrined_followedBy_201_epoch_lr_1e-6/s2_esti_smpl_21.wav","S2 estimated","AudioDiv21");</script>
                </td>
                <td id="AudioDiv22" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("#","","AudioDiv22");</script>
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_4_nonPreTrained_lr_1e-3_bs_6/s2_esti_smpl_21.wav","S2 estimated","AudioDiv22");</script>
+               </td>
+               <td id="AudioDiv22a" class="tg-c3ow">
+                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_5_nonPreTrained_lr_1e-3_bs_16/s2_esti_smpl_21.wav","S2 estimated","AudioDiv22a");</script>
                </td>
             </tr>
          </tbody>
       </table>
-   </body>-->
+   </body>
 </html>
