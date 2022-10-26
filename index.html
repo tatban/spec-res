@@ -1,128 +1,284 @@
-<html>
-   <head>
-      <script type = "text/javascript" language="JavaScript">  
-         function loadAudio(audioPath, caption, id) {   
-           document.getElementById(id).innerHTML = "<figure><figcaption>"+caption+"</figcaption><audio controls src="+audioPath+">Your browser does not support the<code>audio</code> element.</audio></figure>";  
-              }  
-      </script>  
-   </head>
-   <body>
-      <h1>Some Comparison</h1>
-      <style type="text/css">
-         .tg  {border-collapse:collapse;border-spacing:0;}
-         .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-         overflow:hidden;padding:10px 5px;word-break:normal;}
-         .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-         font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-         .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-         .tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
-         .tg .tg-0lax{text-align:left;vertical-align:top}
-         .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-      </style>
-      
-      <table class="tg">
-         <thead>
-            <tr>
-               <th class="tg-fymr">Data</th>
-               <th class="tg-0lax"><span style="font-weight:bold">Input Mixed</span></th>
-               <th class="tg-0lax"><span style="font-weight:bold">Ground Truths </span></th>
-               <th class="tg-fymr">exp1: Just Pretrained Inference</th>
-               <th class="tg-fymr">exp2: pretrined_followedBy_201_epoch_lr_1e-3_bs_16</th>
-               <th class="tg-fymr">exp3: pretrined_followedBy_201_epoch_lr_1e-6_bs_16</th>
-               <th class="tg-fymr">exp4: nonPreTrained_201_epoch_lr_1e-3_bs_6</th>
-               <th class="tg-fymr">exp5: nonPreTrained_201_epoch_lr_1e-3_bs_<b>16</b></th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <td class="tg-fymr" rowspan="2">Test sample 1</td>
-               <td id="AudioDiv1" class="tg-0lax" rowspan="2">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/input/mix_inp_smpl_1.wav","","AudioDiv1");</script>
-               </td>
-               <td id="AudioDiv2" class="tg-0lax">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/GTs/s1_gt_smpl_1.wav","S1 Clean","AudioDiv2");</script>
-               </td>
-               <td id="AudioDiv3" class="tg-0pky">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_1_justPretrained/s1_esti_smpl_1.wav","S1 estimated","AudioDiv3");</script>
-               </td>
-               <td id="AudioDiv4" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_2_pretrined_followedBy_201_epoch_lr_1e-3_bs_16/s1_esti_smpl_1.wav","S1 estimated","AudioDiv4");</script>
-               </td>
-               <td id="AudioDiv5" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_3_pretrined_followedBy_201_epoch_lr_1e-6_bs_16/s1_esti_smpl_1.wav","S1 estimated","AudioDiv5");</script>
-               </td>
-               <td id="AudioDiv6" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_4_nonPreTrained_lr_1e-3_bs_6/s1_esti_smpl_1.wav","S1 estimated","AudioDiv6");</script>
-               </td>
-               <td id="AudioDiv6a" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_5_nonPreTrained_lr_1e-3_bs_16/s1_esti_smpl_1.wav","S1 estimated","AudioDiv6a");</script>
-               </td>
-            </tr>
-            <tr>
-               <td id="AudioDiv7" class="tg-0lax">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/GTs/s2_gt_smpl_1.wav","S2 Clean","AudioDiv7");</script>
-               </td>
-               <td id="AudioDiv8" class="tg-0pky">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_1_justPretrained/s2_esti_smpl_1.wav","S2 estimated","AudioDiv8");</script>
-               </td>
-               <td id="AudioDiv9" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_2_pretrined_followedBy_201_epoch_lr_1e-3_bs_16/s2_esti_smpl_1.wav","S2 estimated","AudioDiv9");</script>
-               </td>
-               <td id="AudioDiv10" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_3_pretrined_followedBy_201_epoch_lr_1e-6_bs_16/s2_esti_smpl_1.wav","S2 estimated","AudioDiv10");</script>
-               </td>
-               <td id="AudioDiv11" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_4_nonPreTrained_lr_1e-3_bs_6/s2_esti_smpl_1.wav","S2 estimated","AudioDiv11");</script>
-               </td>
-               <td id="AudioDiv11a" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_1/predictions/experiment_5_nonPreTrained_lr_1e-3_bs_16/s2_esti_smpl_1.wav","S2 estimated","AudioDiv11a");</script>
-               </td>
-            </tr>
-            <tr>
-               <td class="tg-fymr" rowspan="2">Test sample 2</td>
-               <td id="AudioDiv12" class="tg-0lax" rowspan="2">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/input/mix_inp_smpl_21.wav","","AudioDiv12");</script>
-               </td>
-               <td id="AudioDiv13" class="tg-0lax">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/GTs/s1_gt_smpl_21.wav","S1 Clean","AudioDiv13");</script>
-               </td>
-               <td id="AudioDiv14" class="tg-0pky">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_1_justPretrained/s1_esti_smpl_21.wav","S1 estimated","AudioDiv14");</script>
-               </td>
-               <td id="AudioDiv15" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_2_pretrined_followedBy_201_epoch_lr_1e-3/s1_esti_smpl_21.wav","S1 estimated","AudioDiv15");</script>
-               </td>
-               <td id="AudioDiv16" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_3_pretrined_followedBy_201_epoch_lr_1e-6/s1_esti_smpl_21.wav","S1 estimated","AudioDiv16");</script>
-               </td>
-               <td id="AudioDiv17" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_4_nonPreTrained_lr_1e-3_bs_6/s1_esti_smpl_21.wav","S1 estimated","AudioDiv17");</script>
-               </td>
-               <td id="AudioDiv17a" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_5_nonPreTrained_lr_1e-3_bs_16/s1_esti_smpl_21.wav","S1 estimated","AudioDiv17a");</script>
-               </td>
-            </tr>
-            <tr>
-               <td id="AudioDiv18" class="tg-0lax">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/GTs/s2_gt_smpl_21.wav","S2 Clean","AudioDiv18");</script>
-               </td>
-               <td id="AudioDiv19" class="tg-0pky">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_1_justPretrained/s2_esti_smpl_21.wav","S2 estimated","AudioDiv19");</script>
-               </td>
-               <td id="AudioDiv20" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_2_pretrined_followedBy_201_epoch_lr_1e-3/s2_esti_smpl_21.wav","S2 estimated","AudioDiv20");</script>
-               </td>
-               <td id="AudioDiv21" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_3_pretrined_followedBy_201_epoch_lr_1e-6/s2_esti_smpl_21.wav","S2 estimated","AudioDiv21");</script>
-               </td>
-               <td id="AudioDiv22" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_4_nonPreTrained_lr_1e-3_bs_6/s2_esti_smpl_21.wav","S2 estimated","AudioDiv22");</script>
-               </td>
-               <td id="AudioDiv22a" class="tg-c3ow">
-                  <script type="text/javascript" language="JavaScript">loadAudio("result_samples/Sample_21/predictions/experiment_5_nonPreTrained_lr_1e-3_bs_16/s2_esti_smpl_21.wav","S2 estimated","AudioDiv22a");</script>
-               </td>
-            </tr>
-         </tbody>
-      </table>
-   </body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spectron</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="particles-js" style="position:absolute;width: 100%; height: 100%;">
+            <canvas class="particles-js-canvas-el" width="1583" height="497" style="width: 100%; height: 100%;"></canvas>
+        </div>
+        <br><br>
+        <div id="outer_container" style="width: 70%; margin: auto;">
+            <div id="title_author" class="" style="font-family:Verdana;text-align:center;font-color:white;padding:1em;position:relative;background:white;border-radius:1em;">
+                            <h3 style="margin-top: 1em;margin-bottom: 1em;margin-left: 0;margin-right: 0;color: rgba(68,61,68,0.98)">SPECTRON: TARGET SPEAKER EXTRACTION USING CONDITIONAL TRANSFORMER WITH ADVERSARIAL REFINEMENT</h3>
+                            <h4 style="margin-top: 1.67em;margin-bottom: 1.67em;margin-left: 0;margin-right: 0;">Tathagata Bandyopadhyay, Matthias Nießner</h4>
+                            <h5 style="margin-top: 2.33em;margin-bottom: 2.33em;margin-left: 0;margin-right: 0;">Visual Computing Lab, Technical University of Munich</h5>
+                <div><img src="Spectron_GAN.png" id="flowchart_image" style="position:relative;margin: 1em auto;width: 75%;height: auto;padding: 0.5em"></div>
+                <h3><b>Abstract</b></b></h3>
+                <div id="abstract" style="width:80%;font-family:Verdana;text-align:justify;padding:1em;position:relative;background:white;margin: 0 auto;">
+                    Recently, attention-based transformers have become a de facto standard in many deep learning applications including natural language processing, computer vision, signal processing, etc..
+                    In this paper, we propose a transformer-based end-to-end model to extract a target speaker's speech from a monaural multi-speaker mixed audio signal.
+                    Unlike existing speaker extraction methods, we introduce two additional objectives to impose speaker embedding consistency and waveform encoder invertibility and jointly train both Speaker Encoder and Speech Separator to better capture the speaker conditional embedding.
+                    Furthermore, we leverage a multi-scale discriminator to refine the perceptual quality of the extracted speech.
+                    Our experiments show that the use of a dual path transformer in the separator backbone along with proposed training paradigm improves the CNN baseline by <b>3.12 dB</b> points.
+                    Finally, we compare our approach with recent state-of-the-arts and show that our model outperforms existing methods by <b>4.1 dB</b> points on an average without creating additional data dependency.
+                </div>
+                <br>
+                <h3><b>Qualitative Results</b></h3><br>
+                <table style="width:80%;font-family:Verdana;text-align:center;padding:1em;position:relative;background:white;margin: 0 auto;">
+                    <caption style="text-align: justify;margin: 0.7em;padding: 0.7em"><b><u>Spectron vs <a style="color: blue" target="_blank" rel="noopener noreferrer" href="https://google.github.io/speaker-id/publications/VoiceFilter/">VoiceFilter</a>:</u></b></caption>
+                    <thead>
+                        <tr>
+                            <th>Mixed Audio Input</th>
+                            <th>Reference audio for Speaker Embedding</th>
+                            <th>VoiceFilter Output</th>
+                            <th>Spectron Output</th>
+                            <th>Clean audio <br>(ground truth)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/mix/vf_mix_1.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/ref/vf_ref_1.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/vc_out/vf_out_1.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/est/spectron_out_1.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/gt/vf_trg_1.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/mix/vf_mix_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/ref/vf_ref_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/vc_out/vf_out_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/est/spectron_out_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/gt/vf_trg_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/mix/vf_mix_3.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/ref/vf_ref_3.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/vc_out/vf_out_3.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/est/spectron_out_3.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="voicefilter/gt/vf_trg_3.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table><br>
+                <table style="width:80%;font-family:Verdana;text-align:center;padding:1em;position:relative;background:white;margin: 0 auto;">
+                    <caption style="text-align: justify;margin: 0.7em;padding: 0.7em"><b><u>Spectron vs <a style="color: blue" target="_blank" rel="noopener noreferrer" href="https://speech-ai.github.io/xtasnet/">X-TaSNet</a>:</u></b></caption>
+                    <thead>
+                        <tr>
+                            <th>Mixed Audio Input</th>
+                            <th>Reference audio for Speaker Embedding</th>
+                            <th>X-tasnet Output</th>
+                            <th>Spectron Output</th>
+                            <th>Clean audio <br>(ground truth)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/mix/xtasnet_mix_1.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/ref/xtasnet_ref_1.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/xt_out/xtasnet_out_1.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/est/spectron_out_1.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/gt/xtasnet_trg_1.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/mix/xtasnet_mix_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/ref/xtasnet_ref_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/xt_out/xtasnet_out_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/est/spectron_out_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/gt/xtasnet_trg_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/mix/xtasnet_mix_4.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/ref/xtasnet_ref_4.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/xt_out/xtasnet_out_4.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/est/spectron_out_4.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls">
+                                  <source type="audio/wav" src="xtasnet/gt/xtasnet_trg_4.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table><br>
+                <table style="width:80%;font-family:Verdana;text-align:center;padding:1.5em;position:relative;background:white;margin: 0 auto;">
+                    <caption style="text-align: justify;margin: 0.5em;padding: 0.5em"><b><u>Spectron in the wild:</u></b></caption>
+                    <thead>
+                        <tr>
+                            <th>Mixed Audio Input</th>
+                            <th>Reference audio for <br>Speaker Embedding</th>
+                            <th>Spectron Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <audio controls="controls" style="width: 335px">
+                                  <source type="audio/wav" src="wildmix/mix/wild_mix_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls" style="width: 335px">
+                                  <source type="audio/wav" src="wildmix/ref/wild_ref_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls="controls" style="width: 335px">
+                                  <source type="audio/wav" src="wildmix/est/spectron_out_2.wav">
+                                  <p>Your browser does not support the audio element.</p>
+                                </audio>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </div>
+        </div>
 </html>
